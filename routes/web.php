@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dasbor');
-});
+Route::livewire('/','dasbor')->name('dasbor');
+Route::livewire('/rugi-laba','rugi-laba')->name('rugi.laba');
+Route::livewire('/transaksi-reseller','transaksi-reseller')->name('transaksi.reseller');

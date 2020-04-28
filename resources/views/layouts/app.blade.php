@@ -35,7 +35,8 @@
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
     <!-- END: Custom CSS-->
-    @yield('style')
+
+    @livewireStyles
 
 </head>
 <!-- END: Head-->
@@ -91,17 +92,17 @@
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="lines">
                 <li class=" navigation-header"><span>Laporan</span>
                 </li>
-                <li class=" nav-item"><a href="" target="_blank"><i class="menu-livicon" data-icon="morph-folder"></i><span class="menu-title" data-i18n="Documentation">Dasbor</span></a>
+                <li class=" nav-item"><a href="/" data-turbolinks-action="replace"><i class="menu-livicon" data-icon="morph-folder"></i><span class="menu-title" data-i18n="Documentation">Dasbor</span></a>
                 </li>
-                <li class=" nav-item"><a href="" target="_blank"><i class="menu-livicon" data-icon="morph-folder"></i><span class="menu-title" data-i18n="Documentation">Rugi Laba</span></a>
+                <li class=" nav-item"><a href="/rugi-laba" data-turbolinks-action="replace"><i class="menu-livicon" data-icon="morph-folder"></i><span class="menu-title" data-i18n="Documentation">Rugi Laba</span></a>
                 </li>
-                <li class=" nav-item"><a href="" target="_blank"><i class="menu-livicon" data-icon="help"></i><span class="menu-title" data-i18n="Raise Support">Penjualan Produk</span></a>
+                <li class=" nav-item"><a href="" data-turbolinks-action="replace"><i class="menu-livicon" data-icon="help"></i><span class="menu-title" data-i18n="Raise Support">Penjualan Produk</span></a>
                 </li>
-                <li class=" nav-item"><a href="" target="_blank"><i class="menu-livicon" data-icon="help"></i><span class="menu-title" data-i18n="Raise Support">Transaksi Reseller</span></a>
+                <li class=" nav-item"><a href="/transaksi-reseller" data-turbolinks-action="replace"><i class="menu-livicon" data-icon="help"></i><span class="menu-title" data-i18n="Raise Support">Transaksi Reseller</span></a>
                 </li>
-                <li class=" nav-item"><a href="" target="_blank"><i class="menu-livicon" data-icon="help"></i><span class="menu-title" data-i18n="Raise Support">Piutang</span></a>
+                <li class=" nav-item"><a href="" data-turbolinks-action="replace"><i class="menu-livicon" data-icon="help"></i><span class="menu-title" data-i18n="Raise Support">Piutang</span></a>
                 </li>
-                <li class=" nav-item"><a href="" target="_blank"><i class="menu-livicon" data-icon="help"></i><span class="menu-title" data-i18n="Raise Support">Komisi Reseller</span></a>
+                <li class=" nav-item"><a href="" data-turbolinks-action="replace"><i class="menu-livicon" data-icon="help"></i><span class="menu-title" data-i18n="Raise Support">Komisi Reseller</span></a>
                 </li>
             </ul>
         </div>
@@ -151,8 +152,11 @@
     <script src="{{ asset('app-assets/js/scripts/footer.js') }}"></script>
     <!-- END: Theme JS-->
 
+
+    <script src="{{ asset('js/app.js') }}"></script>
+
     <!-- END: Page JS-->
-    @yield('script')
+    @livewireScripts
 
 </body>
 <!-- END: Body-->
